@@ -43,7 +43,7 @@ window.addEventListener('scroll', () => {
 // -------------------- Projects Fetch + Animation Fix --------------------
 document.addEventListener("DOMContentLoaded", () => {
 
-    fetch("http://localhost:8080/projects")
+    fetch("http://16.176.155.129:8080/projects")
         .then(res => res.json())
         .then(data => {
 
@@ -125,7 +125,7 @@ if (contactForm) {
 
         if (message === "") return alert("Message cannot be empty");
 
-        fetch("http://localhost:8080/contact", {
+        fetch("http://16.176.155.129:8080/contact", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name, email, mobile, subject, message })
